@@ -3,6 +3,11 @@
         <Header></Header>
         <Todo></Todo>
         <Footer></Footer>
+        <p>
+            <router-link :to="{name:'home',params:{id:text}}">go to home</router-link>
+            <router-link to="/bar">go to bar</router-link>
+        </p>
+        <router-view></router-view>
         <h1>this is app {{text}}</h1>
     </div>
 </template>
