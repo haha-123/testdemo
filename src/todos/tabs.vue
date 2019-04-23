@@ -7,6 +7,7 @@
             </span>
         </span>
         <span @click="clearCompleted">clear all completed</span>
+        <slot name="slot_tabs"></slot>
     </div>
 </template>
 <script>
