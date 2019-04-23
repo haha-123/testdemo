@@ -2,7 +2,11 @@
     <div class="todo_ms">
         <input type="text" autofocus="autofocus" placeholder="接下来要做什么？" @keyup.enter="addTodo">
         <Item :todo="todo" v-for="todo in filterTodos" :key="todo.id" @del="delTodo"></Item>
-        <Tabs :todos="todos" @toggle="toggleState" @clear="clearCompleted"></Tabs>
+        <Tabs :todos="todos" @toggle="toggleState" @clear="clearCompleted">
+            <div slot="slot_tabs">
+                <p>slot demo</p>
+            </div>
+        </Tabs>
     </div>
 </template>
 <script>
